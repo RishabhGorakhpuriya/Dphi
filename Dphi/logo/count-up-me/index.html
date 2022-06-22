@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>Animated Count Up Plugin Example</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter';
+        }
+
+        /* body {
+            height: 100vh;
+            display: grid;
+            place-items: center;
+            background: #fafafa;
+        } */
+
+        .counter-up {
+            background: #002A3B;
+            width: 100%;
+            height: 100%;
+            display: flex;
+        }
+
+        .counter-up .box {
+            margin: 140px;
+            text-align: center;
+            border-radius: 10px;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            color: #fff;
+            box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.2);
+        }
+        .counter-up .line{
+            background: #ffff;
+            width: 1px;
+            height: 62px;
+        }
+        .counter-up .box {
+            width: 55px;
+            height: 55px;
+            background: #fff;
+            position: relative;
+        }
+
+
+        .counter-up .box img {
+            position: absolute;
+            justify-content: center;
+            align-items: center;
+            left: 17px;
+            top: 14px;
+        }
+
+        .counter-up .box .img-1 {
+            top: 15px;
+            left: 15px;
+        }
+
+        .counter-up .box .img-2 {
+            top: 22px;
+            left: 22px;
+        }
+
+        .counter-up .box .img-4 {
+            top: 23px;
+            left: 21px;
+        }
+
+        .counter-up .box div {
+            position: relative;
+            left: 70px;
+            bottom: 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="counter-up">
+                        <div class="box">
+                            <img class="img-1" src="Vector-2.png" alt="">
+                            <img class="img-2" src="Vector-2-1.png" alt="">
+                            <div>
+                                <h1 id="num1">100</h1>
+                                <h5>AI model submissions</h5>
+                            </div>
+                        </div>
+                        <div class="line"></div>
+                        <div class="box">
+                            <img class="img-3" src="Vector-1.png" alt="">
+                            <img class="img-4" src="Vector-1-2.png" alt="">
+                            <div>
+                                <h1 id="num2">435</h1>
+                                <h5>Data Scientists</h5>
+                            </div>
+                        </div>
+                        <div class="line"></div>
+                        <div class="box">
+                            <img src="Vector.png" alt="">
+                            <div>
+                                <h1 id="num3">220</h1>
+                                <h5>AI Challenges hosted</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
+    <script src="res/countMe/countMe.min.js"></script>
+    <script>
+        window.onload = () => {
+            // $(selector).countMe(delay,speed)
+            $("#num1").countMe(40, 65);
+            $("#num2").countMe(30, 30);
+            $("#num3").countMe(40, 100);
+            $("#num4").countMe(100, 200);
+        }
+    </script>
+    <script type="text/javascript">
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-36251023-1']);
+        _gaq.push(['_setDomainName', 'jqueryscript.net']);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+    </script>
+</body>
+
+</html>
